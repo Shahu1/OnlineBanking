@@ -4,22 +4,36 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 
 namespace LoginRegister.Models
 {
     public class AccountDetails
     {
+
         [Key]
-        public int AccountNumber { get; set; }
+        public int UserId { get; set; }
+        
 
         //This is for foreign key refrence
-        [Display(Name = "UserId")]
-        public virtual int UserId { get; set; }
+        [Display(Name = "AccountNumber")]
+        public virtual int AccountNumber { get; set; }
 
-        [ForeignKey("UserId")]
+        [ForeignKey("AccountNumber")]
         public virtual User User { get; set; }
-        public Decimal Balance { get; set; }    
+        public Decimal Balance { get; set; }
+         
+        public int PayeeAccount { get; set; }
+
+        
+
+
+        
+
+
+
+        
 
     }
 }

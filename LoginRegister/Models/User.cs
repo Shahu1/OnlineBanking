@@ -12,16 +12,18 @@ namespace LoginRegister.Models
 
         [Key, Column(Order = 1)]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
+        public int AccountNumber { get; set; }
         [Required]
+
+
        
 
         [DataType(DataType.Text)]
-        public string FirstName { get; set; }
+        public string FullName { get; set; }
         [Required]
         
 
-        [DataType(DataType.Text)]
+        /*[DataType(DataType.Text)]
         public string MiddleName { get; set; }
         [Required]
 
@@ -31,9 +33,10 @@ namespace LoginRegister.Models
 
         [DataType(DataType.Text)]
         public string FathersName { get; set; }
+        */
         
 
-        [Required]
+        
         
         [RegularExpression(@"^([0-9]{10})$",ErrorMessage = "please Enter valid mobile number")]
         [MaxLength(10)]
@@ -73,16 +76,18 @@ namespace LoginRegister.Models
         [StringLength(50, MinimumLength = 6)]
 
 
+
         public string Password { get; set; }
 
         [NotMapped]
         [Required]
         [System.ComponentModel.DataAnnotations.Compare("Password")]
         public string ConfirmPassword { get; set; }
-        public string FullName()
-        {
-            return this.FirstName + " " + this.LastName;
-        }
+
+
+        
+  
+        
     }
 }
     

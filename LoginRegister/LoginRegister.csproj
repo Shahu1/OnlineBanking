@@ -144,9 +144,41 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212151942013_accountDetails .cs" />
-    <Compile Include="Migrations\202212151942013_accountDetails .designer.cs">
-      <DependentUpon>202212151942013_accountDetails .cs</DependentUpon>
+    <Compile Include="Migrations\202212190543539_AccountNumber.cs" />
+    <Compile Include="Migrations\202212190543539_AccountNumber.designer.cs">
+      <DependentUpon>202212190543539_AccountNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212190926345_transactions.cs" />
+    <Compile Include="Migrations\202212190926345_transactions.designer.cs">
+      <DependentUpon>202212190926345_transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212191108115_AccountDetails.cs" />
+    <Compile Include="Migrations\202212191108115_AccountDetails.designer.cs">
+      <DependentUpon>202212191108115_AccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212191753190_Transaction2.cs" />
+    <Compile Include="Migrations\202212191753190_Transaction2.designer.cs">
+      <DependentUpon>202212191753190_Transaction2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212191804529_AccBalance.cs" />
+    <Compile Include="Migrations\202212191804529_AccBalance.designer.cs">
+      <DependentUpon>202212191804529_AccBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212191846216_Payeebalance.cs" />
+    <Compile Include="Migrations\202212191846216_Payeebalance.designer.cs">
+      <DependentUpon>202212191846216_Payeebalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212200622189_balancetbl.cs" />
+    <Compile Include="Migrations\202212200622189_balancetbl.designer.cs">
+      <DependentUpon>202212200622189_balancetbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212200838586_AccDetails.cs" />
+    <Compile Include="Migrations\202212200838586_AccDetails.designer.cs">
+      <DependentUpon>202212200838586_AccDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212200901008_TranID.cs" />
+    <Compile Include="Migrations\202212200901008_TranID.designer.cs">
+      <DependentUpon>202212200901008_TranID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountDetails.cs" />
@@ -195,8 +227,9 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
     <Content Include="Views\Home\Logout.cshtml" />
-    <Content Include="Views\Home\Transaction.cshtml" />
     <Content Include="Views\Home\AccountDetails.cshtml" />
+    <Content Include="Views\Home\MoneyTransfer.cshtml" />
+    <Content Include="Views\Home\Transaction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -215,8 +248,32 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212151942013_accountDetails .resx">
-      <DependentUpon>202212151942013_accountDetails .cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212190543539_AccountNumber.resx">
+      <DependentUpon>202212190543539_AccountNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212190926345_transactions.resx">
+      <DependentUpon>202212190926345_transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212191108115_AccountDetails.resx">
+      <DependentUpon>202212191108115_AccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212191753190_Transaction2.resx">
+      <DependentUpon>202212191753190_Transaction2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212191804529_AccBalance.resx">
+      <DependentUpon>202212191804529_AccBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212191846216_Payeebalance.resx">
+      <DependentUpon>202212191846216_Payeebalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212200622189_balancetbl.resx">
+      <DependentUpon>202212200622189_balancetbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212200838586_AccDetails.resx">
+      <DependentUpon>202212200838586_AccDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212200901008_TranID.resx">
+      <DependentUpon>202212200901008_TranID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

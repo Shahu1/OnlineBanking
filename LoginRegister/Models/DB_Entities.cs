@@ -12,7 +12,7 @@ namespace LoginRegister.Models
     {
         
         public DB_Entities() : base("DatabaseMVC5") { }
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> User { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Database.SetInitializer<demoEntities>(null);
@@ -27,7 +27,7 @@ namespace LoginRegister.Models
         //for transaction
         
 
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Transaction> Transaction { get; set; }
         public DbSet<AccountDetails> AccountDetails { get; set; }   
         
     }
