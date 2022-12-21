@@ -164,26 +164,36 @@ namespace LoginRegister.Controllers
         {
             // var check = _db.Transaction.FirstOrDefault(s => s.TransationAmount == _transfer.AccBalance);
 
-            var check = _db.AccountDetails.FirstOrDefault(s => s.Balance >= _transfer.AccBalance);
+            var check = _db.AccountDetails.Where(Accbal => Accbal.AccountNumber == _transfer.AccountNumber).FirstOrDefault();
+            var check1 = _db.AccountDetails.Where(Accbal => Accbal.AccountNumber == _transfer.PayeeAccountNo).FirstOrDefault();
             if ( _transfer.TransationAmount<= 0 )
             {
-                throw new ApplicationException("Transfer Balance must be positive");
-                //ViewBag.error = "Balance is insuffient to make transaction";
+               // throw new ApplicationException("Transfer Balance must be positive");
+                ViewBag.error = "Balance is insuffient to make transaction";
         
             }
             else if(_transfer.TransationAmount == 0)
             {
-                throw new ApplicationException("Invalid Transfer Amount");
+                //throw new ApplicationException("Invalid Transfer Amount");
+                ViewBag.error = "Insufficient balance";
             }
             //
+            
+            
+           var TempData = check.Balance - _transfer.TransationAmount;
+           check.Balance = TempData;
+           var Transmoney = check1.Balance + _transfer.TransationAmount;
+           check1.Balance =Transmoney;
+           
 
+            //_transfer.TransationAmount -= check.Balance;
+          //  check.Balance += _transfer.PayeeBalance;
+            //_transfer.PayeeBalance
 
-
-
-           //check.Balance-= check.Balance;
-            // check.Balance += _transfer.TransationAmount;
+           /*var bal= 0;
             var temp = check.Balance - _transfer.TransationAmount;
-            temp =check.Balance;
+            bal = temp;
+            temp =check.Balance;*/
             
 
             _db.Transaction.Add(_transfer);
